@@ -4,15 +4,17 @@ use std::collections::HashSet;
 
 fn main() {
     println!("Hi! Try running \"cargo test\" to run tests.");
-    let mut v: Vec<i32> = Vec::new(); //注意这个mut
+    let mut v: Vec<i32> = Vec::new();
+    //this 'mut' can not be missed
 }
 
 fn add_n(v: Vec<i32>, n: i32) -> Vec<i32> {
-    //
+    //mut is necessary here,or you can not change push the number to the array
     let mut ret = Vec::new();
     for i in v.iter() {
         ret.push(i + n);
     }
+    //no semicolon
     ret
 }
 
